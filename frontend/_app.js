@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+//import axios from "axios";
 import { VegaLite } from "react-vega";
 
-import { Infobalken } from "./Infobalken";
+import { Infobalken } from "./Infobalken.jsx";
+import { Operationen } from "./operationen.jsx";
+import { Visualisierung } from "./Visualisierung.jsx";
 
 // Vega-Lite-Spezifikation für das Diagramm
 const spec = {
@@ -54,3 +56,14 @@ const spec = {
     },
   },
 };
+
+export function app() {
+  return (
+    <div>
+      <h1>Wetterdaten Anwendung</h1>
+      <Infobalken />
+      <Operationen />
+      <Visualiserung />
+    </div>
+  );
+}
